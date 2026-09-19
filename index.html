@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<script>document.documentElement.classList.add('js');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>محمود فوزي | حلول رقمية وأمن سيبراني للخليج والسعودية</title>
+<meta name="description" content="مطوّر برمجيات ومختبر اختراق معتمد (eWPTXv3). تطوير مواقع وتطبيقات جوال، منصات تعليم إلكتروني، حلول ذكاء اصطناعي، واختبار اختراق — بخبرة تخدم القطاع الصحي والمؤسسات في السعودية والخليج." />
+<meta name="theme-color" content="#0a1a33" />
+<meta property="og:title" content="محمود فوزي | حلول رقمية وأمن سيبراني للخليج والسعودية" />
+<meta property="og:description" content="تطوير الويب والتطبيقات، منصات التعليم الإلكتروني، حلول الذكاء الاصطناعي، واختبار الاختراق لعملاء السعودية والخليج." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a1a33'/%3E%3Ctext x='50' y='68' font-family='Poppins,Arial' font-size='52' font-weight='800' fill='%23E4B95B' text-anchor='middle'%3EMF%3C/text%3E%3C/svg%3E" />
+<style>
+  :root{
+    --navy:#0a1a33; --navy2:#0f2b52; --navy3:#123a6b;
+    --gold:#E4B95B; --gold2:#caa23f; --teal:#2dd4bf;
+    --ink:#0c1526; --muted:#5b6b82; --line:#e6ebf3;
+    --bg:#f6f8fc; --card:#ffffff; --white:#ffffff;
+    --shadow:0 18px 40px -18px rgba(10,26,51,.28);
+    --shadow-sm:0 8px 24px -14px rgba(10,26,51,.25);
+    --radius:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  html[lang="ar"] body{font-family:'Tajawal','Cairo',system-ui,Arial,sans-serif}
+  html[lang="en"] body{font-family:'Poppins',system-ui,Arial,sans-serif}
+  html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] .brand-name{font-family:'Cairo','Tajawal',sans-serif}
+  body{background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:min(1160px,92vw);margin-inline:auto}
+  section{padding:96px 0}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.82rem;letter-spacing:.5px;color:var(--gold2);text-transform:uppercase;background:rgba(228,185,91,.12);padding:7px 15px;border-radius:999px;margin-bottom:16px}
+  .sec-title{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;line-height:1.25;color:var(--navy);letter-spacing:-.5px}
+  .sec-sub{color:var(--muted);font-size:1.06rem;max-width:640px;margin-top:14px}
+  .sec-head{margin-bottom:52px}
+  .grad{background:linear-gradient(90deg,var(--gold),#f3d283);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(10,26,51,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff}
+  .brand .mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:grid;place-items:center;color:var(--navy);font-family:'Poppins';font-weight:800;font-size:1.05rem}
+  .brand-name{font-weight:800;font-size:1.1rem;line-height:1.1}
+  .brand-name small{display:block;font-weight:500;font-size:.72rem;color:#9fb4d4;letter-spacing:.4px}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{color:#c9d6ec;font-weight:600;font-size:.95rem;transition:.2s}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-cta{display:flex;align-items:center;gap:12px}
+  .lang{border:1px solid rgba(255,255,255,.25);color:#fff;background:transparent;border-radius:999px;padding:8px 16px;font-weight:700;cursor:pointer;font-size:.85rem;transition:.2s}
+  .lang:hover{background:rgba(255,255,255,.12)}
+  .menu-btn{display:none;background:none;border:0;color:#fff;cursor:pointer}
+  .btn{display:inline-flex;align-items:center;gap:9px;border-radius:999px;padding:13px 24px;font-weight:700;font-size:.95rem;cursor:pointer;border:0;transition:.25s;white-space:nowrap}
+  .btn svg{width:18px;height:18px}
+  .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);box-shadow:0 12px 26px -12px rgba(228,185,91,.7)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 34px -12px rgba(228,185,91,.85)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{transform:translateY(-2px);background:var(--navy3)}
+
+  /* HERO */
+  .hero{position:relative;background:radial-gradient(1100px 600px at 85% -10%,rgba(228,185,91,.16),transparent 60%),radial-gradient(900px 500px at 0% 20%,rgba(45,212,191,.10),transparent 55%),linear-gradient(160deg,#0a1a33 0%,#0f2b52 60%,#123a6b 100%);color:#fff;padding:70px 0 90px;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:26px 26px;opacity:.5;pointer-events:none}
+  .hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
+  .hero h1{font-size:clamp(2rem,5.2vw,3.5rem);line-height:1.22;font-weight:800;letter-spacing:-.5px}
+  .hero .lead{color:#c4d3ec;font-size:1.14rem;margin-top:20px;max-width:560px}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:8px 15px;font-size:.86rem;font-weight:600;color:#e7eefb}
+  .chip .dot{width:8px;height:8px;border-radius:50%;background:var(--teal)}
+  .chip .dot.g{background:var(--gold)}
+  /* Hero card */
+  .hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:26px;backdrop-filter:blur(8px);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+  .hero-card h4{font-size:.85rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:700}
+  .mini{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed rgba(255,255,255,.14)}
+  .mini:last-child{border-bottom:0}
+  .mini .ic{flex:0 0 40px;height:40px;border-radius:11px;background:rgba(228,185,91,.16);display:grid;place-items:center;color:var(--gold)}
+  .mini .ic svg{width:20px;height:20px}
+  .mini b{display:block;color:#fff;font-size:.98rem}
+  .mini span{color:#a9bcda;font-size:.86rem}
+
+  /* STATS */
+  .stats{background:var(--navy);color:#fff;padding:0}
+  .stats-in{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:44px 0}
+  .stat{text-align:center}
+  .stat-num{font-family:'Poppins';font-size:clamp(1.9rem,4vw,2.7rem);font-weight:800;color:var(--gold);line-height:1}
+  .stat-lbl{color:#a9bcda;font-size:.95rem;margin-top:8px;font-weight:600}
+
+  /* SERVICES */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:.3s;position:relative;overflow:hidden}
+  .svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+  .svc .ic{width:56px;height:56px;border-radius:15px;background:linear-gradient(135deg,var(--navy),var(--navy3));display:grid;place-items:center;color:var(--gold);margin-bottom:18px}
+  .svc .ic svg{width:27px;height:27px}
+  .svc h3{font-size:1.22rem;color:var(--navy);font-weight:800;margin-bottom:10px}
+  .svc p{color:var(--muted);font-size:.98rem}
+  .svc .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+  .svc .tags span{font-size:.76rem;font-weight:600;color:var(--navy3);background:#eef3fb;border-radius:7px;padding:4px 10px}
+
+  /* WORK */
+  #work{background:linear-gradient(180deg,#eef2f9,#f6f8fc)}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  .work-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+  .work-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .work-top{padding:26px 26px 0;display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .work-logo{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-family:'Poppins';font-weight:800;color:#fff;font-size:1.2rem;flex:0 0 auto}
+  .flag{display:inline-flex;align-items:center;gap:6px;background:#e7f7ef;color:#127a4f;font-weight:700;font-size:.76rem;padding:5px 11px;border-radius:999px}
+  .flag.ai{background:#eef0ff;color:#4b3fd0}
+  .flag.edu{background:#fff3e0;color:#b26a00}
+  .flag.sec{background:#fdeaea;color:#c0342c}
+  .work-body{padding:18px 26px 26px;display:flex;flex-direction:column;flex:1}
+  .work-body h3{font-size:1.28rem;color:var(--navy);font-weight:800;margin-bottom:6px}
+  .work-body .role{color:var(--gold2);font-weight:700;font-size:.85rem;margin-bottom:10px}
+  .work-body p{color:var(--muted);font-size:.97rem;flex:1}
+  .work-tags{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0}
+  .work-tags span{font-size:.74rem;font-weight:600;color:#33507a;background:#eef3fb;border-radius:7px;padding:4px 10px}
+  .work-link{display:inline-flex;align-items:center;gap:7px;font-weight:700;color:var(--navy);font-size:.92rem;transition:.2s}
+  .work-link:hover{color:var(--gold2);gap:11px}
+  .work-link svg{width:16px;height:16px}
+
+  /* WHY */
+  #why{background:radial-gradient(900px 500px at 100% 0,rgba(228,185,91,.12),transparent 55%),linear-gradient(160deg,#0a1a33,#0f2b52);color:#fff}
+  #why .sec-title{color:#fff}
+  .why-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+  .why-list{display:grid;gap:20px}
+  .why-item{display:flex;gap:16px;align-items:flex-start}
+  .why-item .ic{flex:0 0 46px;height:46px;border-radius:13px;background:rgba(228,185,91,.16);display:grid;place-items:center;color:var(--gold)}
+  .why-item .ic svg{width:22px;height:22px}
+  .why-item h4{font-size:1.12rem;font-weight:800;margin-bottom:4px}
+  .why-item p{color:#b3c4de;font-size:.96rem}
+  .about-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:30px}
+  .about-box h3{color:var(--gold);font-size:1.15rem;margin-bottom:12px}
+  .about-box p{color:#cdd9ee;font-size:1rem}
+  .about-box .sig{margin-top:18px;display:flex;align-items:center;gap:14px;border-top:1px solid rgba(255,255,255,.12);padding-top:18px}
+  .about-box .sig .mark{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:grid;place-items:center;color:var(--navy);font-family:'Poppins';font-weight:800}
+  .about-box .sig b{display:block;color:#fff}
+  .about-box .sig span{color:#9fb4d4;font-size:.85rem}
+
+  /* TESTIMONIALS */
+  .grid-3.tst{gap:24px}
+  .quote{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-sm)}
+  .quote .stars{color:var(--gold);font-size:1rem;letter-spacing:2px;margin-bottom:12px}
+  .quote p{color:#2c3a52;font-size:.98rem;font-style:italic}
+  .quote .who{display:flex;align-items:center;gap:12px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+  .quote .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy3));color:#fff;display:grid;place-items:center;font-weight:800}
+  .quote .who b{color:var(--navy);font-size:.95rem;display:block}
+  .quote .who span{color:var(--muted);font-size:.83rem}
+
+  /* CONTACT */
+  #contact{background:var(--navy);color:#fff;text-align:center}
+  #contact .sec-title{color:#fff}
+  .contact-sub{color:#b3c4de;font-size:1.1rem;max-width:560px;margin:16px auto 34px}
+  .contact-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+  .social{display:flex;gap:14px;justify-content:center;margin-top:38px;flex-wrap:wrap}
+  .social a{width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;color:#cdd9ee;transition:.25s}
+  .social a:hover{background:var(--gold);color:var(--navy);transform:translateY(-3px)}
+  .social a svg{width:22px;height:22px}
+
+  footer{background:#07142a;color:#8ea3c4;text-align:center;padding:28px 0;font-size:.9rem}
+  footer b{color:#cdd9ee}
+
+  /* reveal (progressive enhancement — only hides when JS is active) */
+  html.js .reveal{opacity:0;transform:translateY(26px);transition:.75s cubic-bezier(.2,.7,.2,1)}
+  .reveal.visible{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+  /* ===== work gallery covers ===== */
+  .work-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+  .work-card .cover{position:relative;height:190px;overflow:hidden;background:#0a1a33}
+  .work-card .cover>img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .6s ease}
+  .work-card:hover .cover>img{transform:scale(1.06)}
+  .work-card .cover .flag{position:absolute;top:12px;inset-inline-start:12px;z-index:2;box-shadow:0 8px 18px -8px rgba(0,0,0,.5)}
+  .cover-grad{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#fff;text-align:center}
+  .cover-grad>svg{width:44px;height:44px;opacity:.95}
+  .cover-grad b{font-size:1.35rem;font-weight:800;letter-spacing:.4px}
+  .cover-grad .sub{font-size:.82rem;color:rgba(255,255,255,.82);font-weight:600}
+  /* ===== build + secure band ===== */
+  .band{background:linear-gradient(135deg,#0d2143,#0a1a33)}
+  .band-in{display:flex;align-items:center;justify-content:center;gap:26px;padding:26px 0;flex-wrap:wrap;text-align:center}
+  .steps{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center}
+  .steps .step{display:inline-flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:1.06rem}
+  .steps .n{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);display:grid;place-items:center;font-family:'Poppins'}
+  .steps .arrow{color:var(--gold);font-size:1.25rem;opacity:.85;display:inline-block}
+  html[dir="rtl"] .steps .arrow{transform:scaleX(-1)}
+  .band p{color:#c4d3ec;max-width:600px;font-size:1rem;margin:0}
+  /* ===== certifications & achievements ===== */
+  #certs{background:var(--bg)}
+  .cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin-bottom:40px}
+  .cert{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;transition:.25s}
+  .cert:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm);border-color:transparent}
+  .cert .ic{flex:0 0 44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--navy3));color:var(--gold);display:grid;place-items:center}
+  .cert .ic svg{width:22px;height:22px}
+  .cert b{display:block;color:var(--navy);font-size:1rem;line-height:1.25}
+  .cert .iss{color:var(--muted);font-size:.83rem;display:block;margin-top:2px}
+  .cert .prog{display:inline-block;margin-top:6px;font-size:.7rem;font-weight:800;color:#b26a00;background:#fff3e0;border-radius:6px;padding:3px 9px}
+  .ach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+  .ach{display:flex;gap:13px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:.25s}
+  .ach:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+  .ach .t{font-size:1.5rem;flex:0 0 auto;line-height:1}
+  .ach b{color:var(--navy);font-size:.92rem;display:block}
+  .ach span{color:var(--muted);font-size:.8rem}
+
+  /* responsive */
+  @media(max-width:900px){
+    .hero-in{grid-template-columns:1fr;gap:36px}
+    .why-grid{grid-template-columns:1fr;gap:34px}
+    .grid-3{grid-template-columns:1fr 1fr}
+    .stats-in{grid-template-columns:1fr 1fr;gap:32px 16px}
+    .nav-links{display:none}
+    .menu-btn{display:grid}
+  }
+  @media(max-width:620px){
+    section{padding:70px 0}
+    .grid-3,.grid-2{grid-template-columns:1fr}
+    .brand-name small{display:none}
+    .hero-card{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#" class="brand">
+      <span class="mark">MF</span>
+      <span class="brand-name">محمود فوزي<small data-ar="حلول رقمية وأمن سيبراني" data-en="Digital Solutions & Cybersecurity">حلول رقمية وأمن سيبراني</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services" data-ar="الخدمات" data-en="Services">الخدمات</a>
+      <a href="#work" data-ar="سابقة الأعمال" data-en="Portfolio">سابقة الأعمال</a>
+      <a href="#certs" data-ar="الشهادات" data-en="Certifications">الشهادات</a>
+      <a href="#why" data-ar="لماذا أنا" data-en="Why Me">لماذا أنا</a>
+      <a href="#testimonials" data-ar="آراء العملاء" data-en="Testimonials">آراء العملاء</a>
+      <a href="#contact" data-ar="تواصل" data-en="Contact">تواصل</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="lang" id="langToggle">EN</button>
+      <a href="#contact" class="btn btn-gold" data-ar="اطلب عرض سعر" data-en="Get a Quote">اطلب عرض سعر</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <span class="eyebrow" data-ar="شريكك التقني في الخليج والسعودية" data-en="Your tech partner in the Gulf & KSA">شريكك التقني في الخليج والسعودية</span>
+      <h1 data-ar="نبني منصات وتطبيقات رقمية آمنة تُنمّي أعمالك" data-en="We build secure digital platforms & apps that grow your business">نبني منصات وتطبيقات رقمية آمنة تُنمّي أعمالك</h1>
+      <p class="lead" data-ar="تطوير مواقع وتطبيقات جوال، منصات تعليم إلكتروني، وحلول ذكاء اصطناعي — مبنية على معايير أمنية عالية. بخبرة عملية تخدم القطاع الصحي والمؤسسات في السعودية والخليج." data-en="Web & mobile apps, e-learning platforms, and AI solutions — engineered on strong security foundations. Proven experience serving the healthcare sector and enterprises across KSA and the Gulf.">تطوير مواقع وتطبيقات جوال، منصات تعليم إلكتروني، وحلول ذكاء اصطناعي — مبنية على معايير أمنية عالية. بخبرة عملية تخدم القطاع الصحي والمؤسسات في السعودية والخليج.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/201067783188" target="_blank" rel="noopener" class="btn btn-gold">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.13A11.86 11.86 0 0 1 .16 11.9C.16 5.34 5.5.01 12.06.01a11.82 11.82 0 0 1 8.4 3.49 11.75 11.75 0 0 1 3.48 8.4c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.68-1.45L.06 24zm6.6-3.8c1.73.98 3.04 1.16 4.4 1.17 4.9 0 8.9-4 8.9-8.9 0-2.38-.93-4.6-2.6-6.28a8.83 8.83 0 0 0-6.28-2.6c-4.9 0-8.9 4-8.9 8.9 0 1.68.47 2.94 1.26 4.26l-.8 2.9 2.92-.75zM17.4 14.3c-.07-.11-.24-.18-.5-.3-.26-.14-1.55-.77-1.79-.85-.24-.09-.42-.13-.6.13-.17.26-.68.85-.83 1.02-.15.18-.31.2-.57.07a7.2 7.2 0 0 1-2.12-1.31 7.98 7.98 0 0 1-1.47-1.83c-.15-.26-.02-.4.11-.53.12-.12.26-.31.4-.46.13-.16.17-.27.26-.45.09-.18.05-.33-.02-.46-.07-.13-.6-1.44-.82-1.97-.21-.52-.43-.44-.6-.45l-.5-.01c-.18 0-.46.07-.7.33-.24.26-.92.9-.92 2.2 0 1.3.94 2.55 1.07 2.72.13.18 1.85 2.83 4.48 3.97.63.27 1.11.43 1.49.55.63.2 1.2.17 1.65.1.5-.07 1.55-.63 1.77-1.24.22-.61.22-1.13.15-1.24z"/></svg>
+          <span data-ar="ابدأ مشروعك على واتساب" data-en="Start on WhatsApp">ابدأ مشروعك على واتساب</span>
+        </a>
+        <a href="#work" class="btn btn-ghost">
+          <span data-ar="شاهد أعمالي" data-en="View my work">شاهد أعمالي</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="hero-badges">
+        <span class="chip"><span class="dot g"></span><span data-ar="مختبر اختراق معتمد eWPTXv3" data-en="Certified Pentester · eWPTXv3">مختبر اختراق معتمد eWPTXv3</span></span>
+        <span class="chip"><span class="dot"></span><span data-ar="عربي / إنجليزي · RTL كامل" data-en="Arabic / English · Full RTL">عربي / إنجليزي · RTL كامل</span></span>
+        <span class="chip"><span class="dot g"></span><span data-ar="منصات تعمل فعليًا في السعودية" data-en="Live platforms running in KSA">منصات تعمل فعليًا في السعودية</span></span>
+      </div>
+    </div>
+    <div class="hero-card reveal">
+      <h4 data-ar="ماذا أقدّم؟" data-en="What I deliver">ماذا أقدّم؟</h4>
+      <div class="mini">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span>
+        <div><b data-ar="مواقع وتطبيقات ويب" data-en="Web apps & sites">مواقع وتطبيقات ويب</b><span data-ar="Next.js · Angular · لوحات تحكم SaaS" data-en="Next.js · Angular · SaaS dashboards">Next.js · Angular · لوحات تحكم SaaS</span></div>
+      </div>
+      <div class="mini">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></span>
+        <div><b data-ar="تطبيقات جوال" data-en="Mobile apps">تطبيقات جوال</b><span data-ar="Flutter لأندرويد و iOS" data-en="Flutter for Android & iOS">Flutter لأندرويد و iOS</span></div>
+      </div>
+      <div class="mini">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></span>
+        <div><b data-ar="منصات تعليم إلكتروني" data-en="E-learning platforms">منصات تعليم إلكتروني</b><span data-ar="دورات · اختبارات · شهادات" data-en="Courses · exams · certificates">دورات · اختبارات · شهادات</span></div>
+      </div>
+      <div class="mini">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 4.8L20 8l-4 4 1 6-5-3-5 3 1-6-4-4 5.6-1.2z"/></svg></span>
+        <div><b data-ar="ذكاء اصطناعي وأتمتة" data-en="AI & automation">ذكاء اصطناعي وأتمتة</b><span data-ar="استخراج فواتير OCR · مساعدين محادثة" data-en="Invoice OCR · chat assistants">استخراج فواتير OCR · مساعدين محادثة</span></div>
+      </div>
+      <div class="mini">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/></svg></span>
+        <div><b data-ar="اختبار اختراق وأمن" data-en="Pentesting & security">اختبار اختراق وأمن</b><span data-ar="ويب · API · شبكات · موبايل" data-en="Web · API · network · mobile">ويب · API · شبكات · موبايل</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILD + SECURE BAND -->
+<div class="band">
+  <div class="wrap band-in">
+    <div class="steps">
+      <span class="step"><span class="n">1</span><span data-ar="أبني" data-en="Build">أبني</span></span>
+      <span class="arrow">&#8594;</span>
+      <span class="step"><span class="n">2</span><span data-ar="أختبر" data-en="Test">أختبر</span></span>
+      <span class="arrow">&#8594;</span>
+      <span class="step"><span class="n">3</span><span data-ar="أؤمّن" data-en="Secure">أؤمّن</span></span>
+    </div>
+    <p data-ar="مطوّر full-stack ومختبر اختراق معتمد في شخص واحد: أبني تطبيقات الويب والجوال ثم أختبرها وأؤمّنها بنفسي — أو أنفّذ اختبار اختراق احترافي لمشاريعك القائمة." data-en="A full-stack developer and certified penetration tester in one: I build your web &amp; mobile apps, then test and secure them myself — or run a professional penetration test on your existing projects.">مطوّر full-stack ومختبر اختراق معتمد في شخص واحد: أبني تطبيقات الويب والجوال ثم أختبرها وأؤمّنها بنفسي — أو أنفّذ اختبار اختراق احترافي لمشاريعك القائمة.</p>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap stats-in">
+    <div class="stat reveal"><div class="stat-num" data-count="2000" data-suffix="+">0</div><div class="stat-lbl" data-ar="متدرّب على منصاته" data-en="Learners on his platforms">متدرّب على منصاته</div></div>
+    <div class="stat reveal d1"><div class="stat-num" data-count="7" data-suffix="">0</div><div class="stat-lbl" data-ar="منصات ومنتجات مباشرة" data-en="Live platforms & products">منصات ومنتجات مباشرة</div></div>
+    <div class="stat reveal d2"><div class="stat-num" data-count="20" data-suffix="+">0</div><div class="stat-lbl" data-ar="مشروع برمجي" data-en="Software projects">مشروع برمجي</div></div>
+    <div class="stat reveal d3"><div class="stat-num" data-count="173" data-suffix="">0</div><div class="stat-lbl" data-ar="ثغرة أمنية موثّقة" data-en="Documented vulnerabilities">ثغرة أمنية موثّقة</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-ar="خدماتي" data-en="My Services">خدماتي</span>
+      <h2 class="sec-title" data-ar="حلول متكاملة من الفكرة إلى التشغيل" data-en="End-to-end solutions, from idea to launch">حلول متكاملة من الفكرة إلى التشغيل</h2>
+      <p class="sec-sub" data-ar="أغطّي دورة المشروع الكاملة: تصميم، تطوير، نشر على السيرفر، وحماية أمنية — بمعايير احترافية تناسب مؤسسات الخليج والسعودية." data-en="I cover the full project lifecycle: design, development, deployment, and security hardening — to professional standards suited for Gulf and Saudi organizations.">أغطّي دورة المشروع الكاملة: تصميم، تطوير، نشر على السيرفر، وحماية أمنية — بمعايير احترافية تناسب مؤسسات الخليج والسعودية.</p>
+    </div>
+    <div class="grid-3">
+      <div class="svc reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14l-2 2 2 2M16 14l2 2-2 2"/></svg></span>
+        <h3 data-ar="تطوير الويب" data-en="Web Development">تطوير الويب</h3>
+        <p data-ar="مواقع، لوحات تحكم، ومنصات SaaS ثنائية اللغة (عربي/إنجليزي) بدعم RTL كامل وأداء سريع وتصميم متجاوب." data-en="Websites, dashboards, and bilingual (AR/EN) SaaS platforms with full RTL support, fast performance, and responsive design.">مواقع، لوحات تحكم، ومنصات SaaS ثنائية اللغة (عربي/إنجليزي) بدعم RTL كامل وأداء سريع وتصميم متجاوب.</p>
+        <div class="tags"><span>Next.js</span><span>TypeScript</span><span>Angular</span><span>Prisma</span><span>PHP</span></div>
+      </div>
+      <div class="svc reveal d1">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg></span>
+        <h3 data-ar="تطبيقات الجوال" data-en="Mobile Apps">تطبيقات الجوال</h3>
+        <p data-ar="تطبيقات أندرويد و iOS بواجهات عربية أنيقة، ربط آمن بواجهات API، وتجربة استخدام سلسة على جميع الأجهزة." data-en="Android & iOS apps with elegant Arabic UIs, secure API integration, and a smooth experience across devices.">تطبيقات أندرويد و iOS بواجهات عربية أنيقة، ربط آمن بواجهات API، وتجربة استخدام سلسة على جميع الأجهزة.</p>
+        <div class="tags"><span>Flutter</span><span>Dart</span><span>REST API</span><span>Auth</span></div>
+      </div>
+      <div class="svc reveal d2">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></span>
+        <h3 data-ar="منصات التعليم الإلكتروني" data-en="E-Learning Platforms">منصات التعليم الإلكتروني</h3>
+        <p data-ar="أنظمة تدريب متكاملة: دورات مباشرة وعند الطلب، اختبارات، شهادات، مدفوعات، وحماية للمحتوى — جاهزة للقطاع الصحي والتعليمي." data-en="Complete training systems: live & on-demand courses, exams, certificates, payments, and content protection — ready for the health and education sectors.">أنظمة تدريب متكاملة: دورات مباشرة وعند الطلب، اختبارات، شهادات، مدفوعات، وحماية للمحتوى — جاهزة للقطاع الصحي والتعليمي.</p>
+        <div class="tags"><span>LMS</span><span data-ar="مدفوعات" data-en="Payments">مدفوعات</span><span data-ar="شهادات" data-en="Certificates">شهادات</span></div>
+      </div>
+      <div class="svc reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></span>
+        <h3 data-ar="الذكاء الاصطناعي والأتمتة" data-en="AI & Automation">الذكاء الاصطناعي والأتمتة</h3>
+        <p data-ar="حلول عملية توفّر الوقت: استخراج بيانات الفواتير والمستندات (OCR)، مساعدون بالمحادثة العربية، وأتمتة سير العمل بين أنظمتك." data-en="Practical, time-saving solutions: invoice & document extraction (OCR), Arabic chat assistants, and workflow automation across your systems.">حلول عملية توفّر الوقت: استخراج بيانات الفواتير والمستندات (OCR)، مساعدون بالمحادثة العربية، وأتمتة سير العمل بين أنظمتك.</p>
+        <div class="tags"><span>OCR</span><span>Gemini</span><span>n8n</span><span>Chatbots</span></div>
+      </div>
+      <div class="svc reveal d1">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <h3 data-ar="الأمن السيبراني واختبار الاختراق" data-en="Cybersecurity & Pentesting">الأمن السيبراني واختبار الاختراق</h3>
+        <p data-ar="اختبار اختراق للويب وواجهات API والشبكات و Active Directory والموبايل، مع تقارير احترافية وفق OWASP و CVSS وإعادة اختبار بعد الإصلاح." data-en="Penetration testing for web, APIs, networks, Active Directory, and mobile — with professional OWASP/CVSS reports and post-fix retesting.">اختبار اختراق للويب وواجهات API والشبكات و Active Directory والموبايل، مع تقارير احترافية وفق OWASP و CVSS وإعادة اختبار بعد الإصلاح.</p>
+        <div class="tags"><span>OWASP</span><span>API Security</span><span>Red Team</span><span>Mobile</span></div>
+      </div>
+      <div class="svc reveal d2">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-2 5 5 0 0 1 9 2c-2 4.5-9 9-9 9z"/><path d="M12 7v6M9 10h6"/></svg></span>
+        <h3 data-ar="حلول القطاع الصحي" data-en="Healthcare Solutions">حلول القطاع الصحي</h3>
+        <p data-ar="منصات وأنظمة متوافقة مع معايير CBAHI / سباهي و CHI: سلامة المرضى، الجودة، الاعتماد، وإدارة برامج التدريب الطبي." data-en="Platforms and systems aligned with CBAHI/Sabahi and CHI standards: patient safety, quality, accreditation, and medical training management.">منصات وأنظمة متوافقة مع معايير CBAHI / سباهي و CHI: سلامة المرضى، الجودة، الاعتماد، وإدارة برامج التدريب الطبي.</p>
+        <div class="tags"><span>CBAHI</span><span data-ar="سباهي" data-en="Sabahi">سباهي</span><span>CHI</span><span data-ar="سلامة المرضى" data-en="Patient Safety">سلامة المرضى</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK / PORTFOLIO -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-ar="سابقة الأعمال" data-en="Portfolio">سابقة الأعمال</span>
+      <h2 class="sec-title" data-ar="مشاريع حقيقية تعمل وتخدم آلاف المستخدمين" data-en="Real projects, live and serving thousands">مشاريع حقيقية تعمل وتخدم آلاف المستخدمين</h2>
+      <p class="sec-sub" data-ar="نماذج من منصات ومنتجات قمت بتطويرها — بعضها يخدم عملاء في السعودية بالفعل." data-en="A selection of platforms and products I've built — some already serving clients in Saudi Arabia.">نماذج من منصات ومنتجات قمت بتطويرها — بعضها يخدم عملاء في السعودية بالفعل.</p>
+    </div>
+    <div class="work-grid">
+
+      <!-- Masar (KSA flagship) -->
+      <article class="work-card reveal">
+        <div class="cover"><img src="shots/masar.jpg" alt="Masar Al-Ehtiraf" loading="lazy"><span class="flag"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.8 7.2 17l.9-5.4L4.2 7.8l5.4-.8z"/></svg><span data-ar="عميل سعودي" data-en="Saudi client">عميل سعودي</span></span></div>
+        <div class="work-body">
+          <h3 data-ar="مسار الاحتراف الصحي" data-en="Masar Al-Ehtiraf Health Academy">مسار الاحتراف الصحي</h3>
+          <div class="role" data-ar="منصة أكاديمية + متجر رقمي · السعودية" data-en="Academy platform + digital store · KSA">منصة أكاديمية + متجر رقمي · السعودية</div>
+          <p data-ar="أكاديمية صحية سعودية متكاملة: دورات معتمدة (CBAHI · CPPS · RCM · CPHRM · CPHQ · Lean Six Sigma)، متجر منتجات رقمية بالريال السعودي، ونظام تعلّم إلكتروني للكوادر الطبية والإدارية." data-en="A complete Saudi health academy: accredited courses (CBAHI · CPPS · RCM · CPHRM · CPHQ · Lean Six Sigma), a digital-products store priced in SAR, and an LMS for medical and administrative staff.">أكاديمية صحية سعودية متكاملة: دورات معتمدة (CBAHI · CPPS · RCM · CPHRM · CPHQ · Lean Six Sigma)، متجر منتجات رقمية بالريال السعودي، ونظام تعلّم إلكتروني للكوادر الطبية والإدارية.</p>
+          <div class="work-tags"><span>Web</span><span>LMS</span><span>E-commerce</span><span>RTL</span><span>KSA</span></div>
+          <a class="work-link" href="https://masarelehtraf.com/" target="_blank" rel="noopener"><span data-ar="زيارة الموقع" data-en="Visit site">زيارة الموقع</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Etqan Health Academy -->
+      <article class="work-card reveal d1">
+        <div class="cover"><img src="shots/etqan.jpg" alt="Etqan Health Academy" loading="lazy"><span class="flag"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-2 5 5 0 0 1 9 2c-2 4.5-9 9-9 9z"/></svg><span data-ar="القطاع الصحي" data-en="Healthcare">القطاع الصحي</span></span></div>
+        <div class="work-body">
+          <h3 data-ar="أكاديمية إتقان الصحية (Etqan Health Academy)" data-en="Etqan Health Academy">أكاديمية إتقان الصحية (Etqan Health Academy)</h3>
+          <div class="role" data-ar="منصة أكاديمية صحية · Next.js" data-en="Health academy platform · Next.js">منصة أكاديمية صحية · Next.js</div>
+          <p data-ar="منصة صحية حديثة قائمة على ثلاث ركائز: الاستشارات المتخصصة، والتدريب المهني، والتطوير الصحي — مع دورات مجانية وفعاليات، مسارات مخصّصة لتحسين تجربة المريض، وتجربة عربية/إنجليزية كاملة." data-en="A modern health platform built on three pillars — specialized consulting, professional training, and healthcare development — with free courses and events, tailored patient-experience tracks, and a full Arabic/English experience.">منصة صحية حديثة قائمة على ثلاث ركائز: الاستشارات المتخصصة، والتدريب المهني، والتطوير الصحي — مع دورات مجانية وفعاليات، مسارات مخصّصة لتحسين تجربة المريض، وتجربة عربية/إنجليزية كاملة.</p>
+          <div class="work-tags"><span>Next.js</span><span data-ar="القطاع الصحي" data-en="Healthcare">القطاع الصحي</span><span data-ar="استشارات" data-en="Consulting">استشارات</span><span>AR/EN</span></div>
+          <a class="work-link" href="https://etqanhealthacademy.com/" target="_blank" rel="noopener"><span data-ar="زيارة الموقع" data-en="Visit site">زيارة الموقع</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+
+      <!-- CPPS-Tricks -->
+      <article class="work-card reveal d2">
+        <div class="cover"><img src="shots/cpps.jpg" alt="CPPS-Tricks" loading="lazy"><span class="flag edu"><span data-ar="+2000 طالب" data-en="2000+ students">+2000 طالب</span></span></div>
+        <div class="work-body">
+          <h3 data-ar="CPPS-Tricks — أكاديمية سلامة المرضى" data-en="CPPS-Tricks — Patient Safety Academy">CPPS-Tricks — أكاديمية سلامة المرضى</h3>
+          <div class="role" data-ar="منصة تعليم إلكتروني · عضو في إتقان" data-en="E-learning platform · member of Etqan">منصة تعليم إلكتروني · عضو في إتقان</div>
+          <p data-ar="منصة تدريب واعتماد في سلامة المرضى (CPPS): أكثر من 2000 طالب، +14 دورة مباشرة وعند الطلب، اختبارات محاكية للامتحان، وحماية كاملة للمحتوى التعليمي." data-en="A patient-safety training &amp; certification platform (CPPS): 2000+ students, 14+ live and on-demand courses, realistic mock exams, and full learning-content protection.">منصة تدريب واعتماد في سلامة المرضى (CPPS): أكثر من 2000 طالب، +14 دورة مباشرة وعند الطلب، اختبارات محاكية للامتحان، وحماية كاملة للمحتوى التعليمي.</p>
+          <div class="work-tags"><span>LMS</span><span>E-learning</span><span data-ar="مدفوعات" data-en="Payments">مدفوعات</span><span data-ar="اختبارات" data-en="Exams">اختبارات</span></div>
+          <a class="work-link" href="https://www.cpps-tricks.com/" target="_blank" rel="noopener"><span data-ar="زيارة الموقع" data-en="Visit site">زيارة الموقع</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+
+      <!-- RedTrace Mobile Pentesting Academy -->
+      <article class="work-card reveal">
+        <div class="cover"><img src="shots/redtrace.jpg" alt="RedTrace Mobile Pentesting Academy" loading="lazy"><span class="flag ai" style="background:#efe9ff;color:#5b3fd0"><span data-ar="ذكاء اصطناعي" data-en="AI-powered">ذكاء اصطناعي</span></span></div>
+        <div class="work-body">
+          <h3 data-ar="RedTrace — أكاديمية اختبار اختراق الموبايل" data-en="RedTrace — Mobile Pentesting Academy">RedTrace — أكاديمية اختبار اختراق الموبايل</h3>
+          <div class="role" data-ar="تطبيق تعلّم بالذكاء الاصطناعي" data-en="AI-powered learning app">تطبيق تعلّم بالذكاء الاصطناعي</div>
+          <p data-ar="منصة تعلّم ذكية لاختبار اختراق تطبيقات الموبايل (مسار eMAPT): لوحة «إتقان» تقيس تقدّمك عبر المجالات، تحديد نقاط الضعف تلقائيًا، ومساعد ذكاء اصطناعي (AI Tutor) يجيب على أسئلتك في كل درس." data-en="An AI-powered learning platform for mobile-app penetration testing (eMAPT track): a mastery dashboard tracking progress across domains, automatic weak-area detection, and an AI tutor answering your questions in every lesson.">منصة تعلّم ذكية لاختبار اختراق تطبيقات الموبايل (مسار eMAPT): لوحة «إتقان» تقيس تقدّمك عبر المجالات، تحديد نقاط الضعف تلقائيًا، ومساعد ذكاء اصطناعي (AI Tutor) يجيب على أسئلتك في كل درس.</p>
+          <div class="work-tags"><span>AI Tutor</span><span>LLM</span><span data-ar="جوال" data-en="Mobile">جوال</span><span data-ar="تحليلات" data-en="Analytics">تحليلات</span></div>
+          <a class="work-link" href="https://mobile.redtracefai.com/" target="_blank" rel="noopener"><span data-ar="افتح المنصة" data-en="Open platform">افتح المنصة</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Shell Up CTF -->
+      <article class="work-card reveal d1">
+        <div class="cover"><img src="shots/ctf.jpg" alt="Shell Up CTF" loading="lazy"><span class="flag sec"><span data-ar="منصة CTF" data-en="CTF platform">منصة CTF</span></span></div>
+        <div class="work-body">
+          <h3 data-ar="Shell Up — منصة تحديات أمنية (CTF)" data-en="Shell Up — Security CTF Platform">Shell Up — منصة تحديات أمنية (CTF)</h3>
+          <div class="role" data-ar="منصة تدريب هجومي · RedTrace" data-en="Offensive-training platform · RedTrace">منصة تدريب هجومي · RedTrace</div>
+          <p data-ar="منصة Capture The Flag كاملة لصقل مهارات الأمن الهجومي: تحديات متدرّجة، لوحة نتائج مباشرة، تسجيل لاعبين، ونظام إعلانات — بيئة تدريب واقعية تحاكي الاختراق الفعلي." data-en="A full Capture-The-Flag platform to sharpen offensive-security skills: tiered challenges, a live scoreboard, player registration, and an announcements system — a realistic training ground that mirrors real-world exploitation.">منصة Capture The Flag كاملة لصقل مهارات الأمن الهجومي: تحديات متدرّجة، لوحة نتائج مباشرة، تسجيل لاعبين، ونظام إعلانات — بيئة تدريب واقعية تحاكي الاختراق الفعلي.</p>
+          <div class="work-tags"><span>CTF</span><span data-ar="أمن هجومي" data-en="Offensive Security">أمن هجومي</span><span>Full-stack</span><span data-ar="لوحة نتائج" data-en="Scoreboard">لوحة نتائج</span></div>
+          <a class="work-link" href="https://ctf.redtracefai.com/" target="_blank" rel="noopener"><span data-ar="افتح المنصة" data-en="Open platform">افتح المنصة</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Qayd AI Accounting -->
+      <article class="work-card reveal d2">
+        <div class="cover"><img src="shots/qayd.jpg" alt="Qayd AI Accounting" loading="lazy"><span class="flag ai"><span data-ar="منتج SaaS" data-en="SaaS product">منتج SaaS</span></span></div>
+        <div class="work-body">
+          <h3 data-ar="قَيْد — محاسبة بالذكاء الاصطناعي" data-en="Qayd — AI Accounting">قَيْد — محاسبة بالذكاء الاصطناعي</h3>
+          <div class="role" data-ar="نظام SaaS متعدد المنشآت" data-en="Multi-tenant SaaS system">نظام SaaS متعدد المنشآت</div>
+          <p data-ar="من الفاتورة إلى القيد المحاسبي في ثوانٍ: استخراج ذكي للبيانات (OCR)، مطابقة الضرائب تلقائيًا، تقارير ضريبة القيمة المضافة، وتكامل مع أنظمة المحاسبة — بواجهة عربية أولًا وأتمتة عبر n8n." data-en="From invoice to posted journal entry in seconds: AI data extraction (OCR), automatic tax reconciliation, VAT reports, and accounting-system integration — Arabic-first UI with n8n automation.">من الفاتورة إلى القيد المحاسبي في ثوانٍ: استخراج ذكي للبيانات (OCR)، مطابقة الضرائب تلقائيًا، تقارير ضريبة القيمة المضافة، وتكامل مع أنظمة المحاسبة — بواجهة عربية أولًا وأتمتة عبر n8n.</p>
+          <div class="work-tags"><span>AI · OCR</span><span>SaaS</span><span>n8n</span><span>VAT</span><span data-ar="متعدد المنشآت" data-en="Multi-tenant">متعدد المنشآت</span></div>
+          <a class="work-link" href="https://accounting.redtracefai.com/" target="_blank" rel="noopener"><span data-ar="عرض المنتج" data-en="View product">عرض المنتج</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+
+      <!-- MUFAI Portal -->
+      <article class="work-card reveal">
+        <div class="cover"><img src="shots/mufai.jpg" alt="MUFAI Portal" loading="lazy"><span class="flag"><span data-ar="ثنائي اللغة" data-en="Bilingual">ثنائي اللغة</span></span></div>
+        <div class="work-body">
+          <h3 data-ar="بوابة كلية الذكاء الاصطناعي (MUFAI)" data-en="Faculty of AI Portal (MUFAI)">بوابة كلية الذكاء الاصطناعي (MUFAI)</h3>
+          <div class="role" data-ar="بوابة مؤسسية · عربي/إنجليزي" data-en="Institutional portal · AR/EN">بوابة مؤسسية · عربي/إنجليزي</div>
+          <p data-ar="بوابة جامعية كاملة ثنائية اللغة: موقع عام ديناميكي، بوابة للطلاب، لوحة تحكم إدارية لإدارة المحتوى بالكامل، ودليل أعضاء هيئة التدريس — مبنية على Next.js 15 مع دعم RTL أصيل." data-en="A full bilingual university portal: dynamic public site, student portal, an admin dashboard managing all content, and a staff directory — built on Next.js 15 with native RTL support.">بوابة جامعية كاملة ثنائية اللغة: موقع عام ديناميكي، بوابة للطلاب، لوحة تحكم إدارية لإدارة المحتوى بالكامل، ودليل أعضاء هيئة التدريس — مبنية على Next.js 15 مع دعم RTL أصيل.</p>
+          <div class="work-tags"><span>Next.js 15</span><span>Prisma</span><span data-ar="لوحة تحكم" data-en="Dashboard">لوحة تحكم</span><span>Bilingual</span></div>
+          <a class="work-link" href="https://mufaiportal.web.app/" target="_blank" rel="noopener"><span data-ar="زيارة البوابة" data-en="Visit portal">زيارة البوابة</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Mobile & systems (GitHub) -->
+      <article class="work-card reveal d1">
+        <div class="cover cover-grad" style="background:linear-gradient(135deg,#0d1117,#30363d)"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11 11 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg><b>20+ Repos</b><span class="sub">Flutter · Angular · Python</span><span class="flag" style="background:#e8eefc;color:#1e5bd0"><span data-ar="مصدر مفتوح" data-en="Open source">مصدر مفتوح</span></span></div>
+        <div class="work-body">
+          <h3 data-ar="تطبيقات الجوال والأنظمة" data-en="Mobile Apps &amp; Systems">تطبيقات الجوال والأنظمة</h3>
+          <div class="role" data-ar="أكثر من 20 مشروع على GitHub" data-en="20+ projects on GitHub">أكثر من 20 مشروع على GitHub</div>
+          <p data-ar="تطبيقات Flutter (أنظمة مصادقة)، متجر إلكتروني، تطبيقات أسعار العملات، واجهات API بـ Flask، ومشاريع تعلّم آلي (كشف التسلل IDS، وكشف سرطان الرئة بالشبكات العصبية)." data-en="Flutter apps (auth systems), an e-commerce store, currency-rate apps, Flask APIs, and machine-learning projects (intrusion detection, lung-cancer detection with CNNs).">تطبيقات Flutter (أنظمة مصادقة)، متجر إلكتروني، تطبيقات أسعار العملات، واجهات API بـ Flask، ومشاريع تعلّم آلي (كشف التسلل IDS، وكشف سرطان الرئة بالشبكات العصبية).</p>
+          <div class="work-tags"><span>Flutter</span><span>Angular</span><span>Python</span><span>Machine Learning</span></div>
+          <a class="work-link" href="https://github.com/Mahmoud-Fawzi-Fayed?tab=repositories" target="_blank" rel="noopener"><span data-ar="تصفّح المستودعات" data-en="Browse repos">تصفّح المستودعات</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Enterprise security testing -->
+      <article class="work-card reveal d2">
+        <div class="cover cover-grad" style="background:linear-gradient(135deg,#7a1d17,#c0342c)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg><b>OWASP Top 10</b><span class="sub" data-ar="173 ثغرة موثّقة" data-en="173 documented findings">173 ثغرة موثّقة</span><span class="flag sec"><span data-ar="مشروع أمني" data-en="Security project">مشروع أمني</span></span></div>
+        <div class="work-body">
+          <h3 data-ar="اختبار أمني لمنصة GRC مؤسسية" data-en="Enterprise GRC Security Testing">اختبار أمني لمنصة GRC مؤسسية</h3>
+          <div class="role" data-ar="أمن وجودة · 4 منتجات مؤسسية" data-en="Security & QA · 4 enterprise products">أمن وجودة · 4 منتجات مؤسسية</div>
+          <p data-ar="مراجعة أمنية وجودة شاملة لأربعة منتجات مؤسسية: تسجيل 5,445 بلاغًا و173 ثغرة أمنية موثّقة وفق OWASP Top 10، شملت تجاوز الصلاحيات و XSS المخزّن وعيوب المصادقة وتسريب المعلومات." data-en="A comprehensive security &amp; QA review across four enterprise products: 5,445 issues reported and 173 documented vulnerabilities mapped to OWASP Top 10 — including broken access control, stored XSS, authentication flaws, and information disclosure.">مراجعة أمنية وجودة شاملة لأربعة منتجات مؤسسية: تسجيل 5,445 بلاغًا و173 ثغرة أمنية موثّقة وفق OWASP Top 10، شملت تجاوز الصلاحيات و XSS المخزّن وعيوب المصادقة وتسريب المعلومات.</p>
+          <div class="work-tags"><span>OWASP Top 10</span><span>Access Control</span><span>Stored XSS</span><span>QA</span></div>
+          <a class="work-link" href="https://www.linkedin.com/in/mahmoud-fawzy%F0%9F%87%B5%F0%9F%87%B8-81b870235/" target="_blank" rel="noopener"><span data-ar="تفاصيل على لينكدإن" data-en="Details on LinkedIn">تفاصيل على لينكدإن</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY ME -->
+<section id="why">
+  <div class="wrap why-grid">
+    <div class="reveal">
+      <span class="eyebrow" data-ar="لماذا تختارني" data-en="Why choose me">لماذا تختارني</span>
+      <h2 class="sec-title" data-ar="خبرة تفهم السوق الخليجي" data-en="Experience that understands the Gulf market">خبرة تفهم السوق الخليجي</h2>
+      <p class="sec-sub" style="color:#b3c4de" data-ar="لست مجرد مطوّر — بل شريك يفهم متطلبات مؤسسات المنطقة، ويسلّم منتجًا آمنًا وجاهزًا للتشغيل." data-en="Not just a developer — a partner who understands the region's requirements and delivers a secure, launch-ready product.">لست مجرد مطوّر — بل شريك يفهم متطلبات مؤسسات المنطقة، ويسلّم منتجًا آمنًا وجاهزًا للتشغيل.</p>
+      <div class="why-list" style="margin-top:30px">
+        <div class="why-item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.8 7.2 17l.9-5.4L4.2 7.8l5.4-.8z"/></svg></span>
+          <div><h4 data-ar="خبرة مثبتة في السوق السعودي" data-en="Proven track record in KSA">خبرة مثبتة في السوق السعودي</h4><p data-ar="منصات تعمل فعليًا بالريال السعودي ومتوافقة مع معايير CBAHI و سباهي في القطاع الصحي." data-en="Live platforms billing in SAR and aligned with CBAHI and Sabahi standards in the health sector.">منصات تعمل فعليًا بالريال السعودي ومتوافقة مع معايير CBAHI و سباهي في القطاع الصحي.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16M4 12h10M4 19h16"/><path d="M18 9l3 3-3 3"/></svg></span>
+          <div><h4 data-ar="عربي / إنجليزي بإتقان" data-en="Fluent Arabic / English">عربي / إنجليزي بإتقان</h4><p data-ar="تصميم RTL أصيل وتجربة استخدام تناسب مستخدمي الخليج، مع دعم كامل للغتين في كل منتج." data-en="Native RTL design and UX tailored for Gulf users, with full dual-language support in every product.">تصميم RTL أصيل وتجربة استخدام تناسب مستخدمي الخليج، مع دعم كامل للغتين في كل منتج.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <div><h4 data-ar="جودة بمعايير أمنية" data-en="Security-grade quality">جودة بمعايير أمنية</h4><p data-ar="مطوّر ومختبر اختراق معتمد (eWPTXv3) — الحماية مدمجة في المنتج منذ اليوم الأول، لا تُضاف لاحقًا." data-en="A developer and certified pentester (eWPTXv3) — security is built into the product from day one, not bolted on later.">مطوّر ومختبر اختراق معتمد (eWPTXv3) — الحماية مدمجة في المنتج منذ اليوم الأول، لا تُضاف لاحقًا.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/><path d="M12 7v5l3 2"/></svg></span>
+          <div><h4 data-ar="من الفكرة إلى التشغيل والدعم" data-en="From idea to launch & support">من الفكرة إلى التشغيل والدعم</h4><p data-ar="تصميم، تطوير، نشر على السيرفر (PM2 · Nginx · SSL)، ثم دعم وتحديثات مستمرة بعد الإطلاق." data-en="Design, development, server deployment (PM2 · Nginx · SSL), then ongoing support and updates after launch.">تصميم، تطوير، نشر على السيرفر (PM2 · Nginx · SSL)، ثم دعم وتحديثات مستمرة بعد الإطلاق.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="about-box reveal d2">
+      <h3 data-ar="نبذة عني" data-en="About me">نبذة عني</h3>
+      <p data-ar="أنا محمود فوزي، مطوّر full-stack ومختبر اختراق، خرّيج قسم الأمن السيبراني بكلية الذكاء الاصطناعي. أجمع بين بناء المنتجات الرقمية وحمايتها؛ صمّمت وطوّرت منصات تعليمية ومنتجات ذكاء اصطناعي وبوابات مؤسسية تخدم آلاف المستخدمين في مصر والسعودية والخليج. هدفي أن أحوّل فكرتك إلى منتج احترافي آمن يحقق نتائج فعلية." data-en="I'm Mahmoud Fawzy, a full-stack developer and penetration tester, and a Cybersecurity graduate of the Faculty of Artificial Intelligence. I both build digital products and secure them; I've designed and developed e-learning platforms, AI products, and enterprise portals serving thousands of users across Egypt, KSA, and the Gulf. My goal is to turn your idea into a professional, secure product that delivers real results.">أنا محمود فوزي، مطوّر full-stack ومختبر اختراق، خرّيج قسم الأمن السيبراني بكلية الذكاء الاصطناعي. أجمع بين بناء المنتجات الرقمية وحمايتها؛ صمّمت وطوّرت منصات تعليمية ومنتجات ذكاء اصطناعي وبوابات مؤسسية تخدم آلاف المستخدمين في مصر والسعودية والخليج. هدفي أن أحوّل فكرتك إلى منتج احترافي آمن يحقق نتائج فعلية.</p>
+      <div class="sig">
+        <span class="mark">MF</span>
+        <div><b>Mahmoud Fawzy · محمود فوزي</b><span data-ar="مطوّر ومختبر اختراق · eWPTXv3" data-en="Developer & Pentester · eWPTXv3">مطوّر ومختبر اختراق · eWPTXv3</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS & ACHIEVEMENTS -->
+<section id="certs">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-ar="الشهادات والإنجازات" data-en="Certifications & Achievements">الشهادات والإنجازات</span>
+      <h2 class="sec-title" data-ar="مؤهّلات معتمدة وسجلّ إنجازات موثّق" data-en="Accredited qualifications and a proven track record">مؤهّلات معتمدة وسجلّ إنجازات موثّق</h2>
+      <p class="sec-sub" data-ar="شهادات دولية في اختبار الاختراق والأمن السيبراني، ومراكز متقدّمة في مسابقات ومنصّات عالمية." data-en="International certifications in penetration testing and cybersecurity, plus top ranks across global competitions and platforms.">شهادات دولية في اختبار الاختراق والأمن السيبراني، ومراكز متقدّمة في مسابقات ومنصّات عالمية.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5"/></svg></span><div><b>eWPTXv3</b><span class="iss" data-ar="مختبر اختراق تطبيقات ويب (eXtreme) · INE" data-en="Web App Pentester eXtreme · INE">مختبر اختراق تطبيقات ويب (eXtreme) · INE</span></div></div>
+      <div class="cert reveal d1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5"/></svg></span><div><b>eMAPT</b><span class="iss" data-ar="مختبر اختراق تطبيقات الموبايل · INE" data-en="Mobile App Pentester · INE">مختبر اختراق تطبيقات الموبايل · INE</span><span class="prog" data-ar="قيد الإنجاز" data-en="In progress">قيد الإنجاز</span></div></div>
+      <div class="cert reveal d2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5"/></svg></span><div><b>Red Hat Administrator</b><span class="iss" data-ar="المعهد القومي للاتصالات (NTI)" data-en="National Telecommunication Institute (NTI)">المعهد القومي للاتصالات (NTI)</span></div></div>
+      <div class="cert reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5"/></svg></span><div><b>Cisco Cybersecurity (CyberOps)</b><span class="iss" data-ar="المعهد القومي للاتصالات (NTI)" data-en="National Telecommunication Institute (NTI)">المعهد القومي للاتصالات (NTI)</span></div></div>
+      <div class="cert reveal d1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5"/></svg></span><div><b>Red Team &amp; Blue Team</b><span class="iss" data-ar="CyberWarFare Labs" data-en="CyberWarFare Labs">CyberWarFare Labs</span></div></div>
+      <div class="cert reveal d2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5"/></svg></span><div><b data-ar="اختبار الاختراق" data-en="Penetration Testing">اختبار الاختراق</b><span class="iss" data-ar="Hacktify Cyber Security" data-en="Hacktify Cyber Security">Hacktify Cyber Security</span></div></div>
+    </div>
+    <div class="ach-grid">
+      <div class="ach reveal"><span class="t">&#127942;</span><div><b data-ar="المركز الأول — FahemSec" data-en="Rank 1 — FahemSec">المركز الأول — FahemSec</b><span data-ar="منصة أمن سيبراني" data-en="Cybersecurity platform">منصة أمن سيبراني</span></div></div>
+      <div class="ach reveal d1"><span class="t">&#127942;</span><div><b data-ar="المركز الأول — CyberXBytes" data-en="Rank 1 — CyberXBytes">المركز الأول — CyberXBytes</b><span data-ar="منصة تحديات" data-en="Challenge platform">منصة تحديات</span></div></div>
+      <div class="ach reveal d2"><span class="t">&#129352;</span><div><b data-ar="المركز الثاني — pwnCTF 2026" data-en="2nd Place — pwnCTF 2026">المركز الثاني — pwnCTF 2026</b><span data-ar="مسابقة CTF" data-en="CTF competition">مسابقة CTF</span></div></div>
+      <div class="ach reveal"><span class="t">&#128421;&#65039;</span><div><b data-ar="+50 جهاز Hack The Box" data-en="50+ Hack The Box machines">+50 جهاز Hack The Box</b><span data-ar="مسارات AD والشبكات" data-en="AD & Network paths">مسارات AD والشبكات</span></div></div>
+      <div class="ach reveal d1"><span class="t">&#128308;</span><div><b data-ar="مختبر اختراق — CyberX World" data-en="Penetration Tester — CyberX World">مختبر اختراق — CyberX World</b><span data-ar="منذ 2024 حتى الآن" data-en="Since 2024 – present">منذ 2024 حتى الآن</span></div></div>
+      <div class="ach reveal d2"><span class="t">&#128030;</span><div><b data-ar="صائد ثغرات — Bugcrowd" data-en="Bug Hunter — Bugcrowd">صائد ثغرات — Bugcrowd</b><span data-ar="تجاوز صلاحيات ومنطق أعمال" data-en="Access control & business logic">تجاوز صلاحيات ومنطق أعمال</span></div></div>
+      <div class="ach reveal"><span class="t">&#9997;&#65039;</span><div><b data-ar="+9 مقالات على Medium" data-en="9+ write-ups on Medium">+9 مقالات على Medium</b><span data-ar="استغلال ويب وتهريب HTTP" data-en="Web exploitation & HTTP smuggling">استغلال ويب وتهريب HTTP</span></div></div>
+      <div class="ach reveal d1"><span class="t">&#127891;</span><div><b data-ar="كلية الذكاء الاصطناعي" data-en="Faculty of Artificial Intelligence">كلية الذكاء الاصطناعي</b><span data-ar="أمن سيبراني · جامعة المنوفية" data-en="Cybersecurity · Menoufia University">أمن سيبراني · جامعة المنوفية</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-ar="آراء المستخدمين" data-en="Testimonials">آراء المستخدمين</span>
+      <h2 class="sec-title" data-ar="ماذا يقول مستخدمو المنصات؟" data-en="What platform users say">ماذا يقول مستخدمو المنصات؟</h2>
+      <p class="sec-sub" data-ar="آراء حقيقية من مستخدمي منصات التدريب التي طوّرتُها وأشغّلها." data-en="Real feedback from users of the training platforms I built and operate.">آراء حقيقية من مستخدمي منصات التدريب التي طوّرتُها وأشغّلها.</p>
+    </div>
+    <div class="grid-3 tst">
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p data-ar="«دورة مثالية تغطّي كل الجوانب، وأنصح بشدّة بموقع CPPS-tricks.com ودوراته لكل المهتمين.»" data-en="“A perfect course that covers all aspects. I highly recommend the CPPS-tricks.com website and its courses.”">«دورة مثالية تغطّي كل الجوانب، وأنصح بشدّة بموقع CPPS-tricks.com ودوراته لكل المهتمين.»</p>
+        <div class="who"><span class="av">Y</span><div><b>Yasmine Ibrahim</b><span data-ar="مستخدمة منصة CPPS-Tricks" data-en="CPPS-Tricks platform user">مستخدمة منصة CPPS-Tricks</span></div></div>
+      </div>
+      <div class="quote reveal d1">
+        <div class="stars">★★★★★</div>
+        <p data-ar="«دورة ممتازة وقيّمة ساعدتني على اجتياز CPPS من أول مرة. أنصح بها وبموقع CPPS-tricks.com.»" data-en="“An excellent, valuable course that helped me pass CPPS the first time. I recommend it and the CPPS-tricks.com website.”">«دورة ممتازة وقيّمة ساعدتني على اجتياز CPPS من أول مرة. أنصح بها وبموقع CPPS-tricks.com.»</p>
+        <div class="who"><span class="av">M</span><div><b>Maha Ahmed</b><span data-ar="مستخدمة منصة CPPS-Tricks" data-en="CPPS-Tricks platform user">مستخدمة منصة CPPS-Tricks</span></div></div>
+      </div>
+      <div class="quote reveal d2">
+        <div class="stars">★★★★★</div>
+        <p data-ar="«المحتوى منظّم وسهل المتابعة، والمنصة واضحة وعملية. تجربة تعليمية ممتازة عبر الإنترنت.»" data-en="“The content is organized and easy to follow, and the platform is clear and practical. An excellent online learning experience.”">«المحتوى منظّم وسهل المتابعة، والمنصة واضحة وعملية. تجربة تعليمية ممتازة عبر الإنترنت.»</p>
+        <div class="who"><span class="av">E</span><div><b>Eman Merghani</b><span data-ar="مستخدمة منصة CPPS-Tricks" data-en="CPPS-Tricks platform user">مستخدمة منصة CPPS-Tricks</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-ar="لنبدأ العمل" data-en="Let's work together">لنبدأ العمل</span>
+      <h2 class="sec-title" data-ar="جاهز لبناء مشروعك القادم؟" data-en="Ready to build your next project?">جاهز لبناء مشروعك القادم؟</h2>
+      <p class="contact-sub" data-ar="أخدم عملاء السعودية والخليج عن بُعد بالكامل. راسلني بفكرتك وسأعود إليك بخطة تنفيذ واضحة وعرض سعر." data-en="I serve clients across KSA and the Gulf fully remotely. Send me your idea and I'll come back with a clear execution plan and a quote.">أخدم عملاء السعودية والخليج عن بُعد بالكامل. راسلني بفكرتك وسأعود إليك بخطة تنفيذ واضحة وعرض سعر.</p>
+    </div>
+    <div class="contact-btns reveal d1">
+      <a href="https://wa.me/201067783188" target="_blank" rel="noopener" class="btn btn-gold">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.13A11.86 11.86 0 0 1 .16 11.9C.16 5.34 5.5.01 12.06.01a11.82 11.82 0 0 1 8.4 3.49 11.75 11.75 0 0 1 3.48 8.4c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.68-1.45L.06 24zm6.6-3.8c1.73.98 3.04 1.16 4.4 1.17 4.9 0 8.9-4 8.9-8.9 0-2.38-.93-4.6-2.6-6.28a8.83 8.83 0 0 0-6.28-2.6c-4.9 0-8.9 4-8.9 8.9 0 1.68.47 2.94 1.26 4.26l-.8 2.9 2.92-.75z"/></svg>
+        <span data-ar="تواصل عبر واتساب" data-en="Chat on WhatsApp">تواصل عبر واتساب</span>
+      </a>
+      <a href="mailto:mahmoud.fawzy11122@gmail.com" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <span data-ar="أرسل بريدًا" data-en="Send an email">أرسل بريدًا</span>
+      </a>
+    </div>
+    <div class="social reveal d2">
+      <a href="https://wa.me/201067783188" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.13A11.86 11.86 0 0 1 .16 11.9C.16 5.34 5.5.01 12.06.01a11.82 11.82 0 0 1 8.4 3.49 11.75 11.75 0 0 1 3.48 8.4c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.68-1.45L.06 24zm6.6-3.8c1.73.98 3.04 1.16 4.4 1.17 4.9 0 8.9-4 8.9-8.9 0-2.38-.93-4.6-2.6-6.28a8.83 8.83 0 0 0-6.28-2.6c-4.9 0-8.9 4-8.9 8.9 0 1.68.47 2.94 1.26 4.26l-.8 2.9 2.92-.75z"/></svg></a>
+      <a href="mailto:mahmoud.fawzy11122@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+      <a href="https://www.linkedin.com/in/mahmoud-fawzy%F0%9F%87%B5%F0%9F%87%B8-81b870235/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg></a>
+      <a href="https://github.com/Mahmoud-Fawzi-Fayed" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11 11 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></a>
+      <a href="https://medium.com/@Zero-Ray" target="_blank" rel="noopener" aria-label="Medium"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 12a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0zM20.3 12c0 3.4-1 6.1-2.2 6.1-1.2 0-2.2-2.7-2.2-6.1s1-6.1 2.2-6.1c1.2 0 2.2 2.7 2.2 6.1zM24 12c0 3-.4 5.5-.9 5.5s-.9-2.5-.9-5.5.4-5.5.9-5.5.9 2.5.9 5.5z"/></svg></a>
+      <a href="https://protfili0.web.app" target="_blank" rel="noopener" aria-label="Portfolio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>محمود فوزي · Mahmoud Fawzy</b> — <span data-ar="حلول رقمية وأمن سيبراني" data-en="Digital Solutions & Cybersecurity">حلول رقمية وأمن سيبراني</span></p>
+    <p style="margin-top:6px;opacity:.7">© <span id="yr"></span> — <span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved">جميع الحقوق محفوظة</span></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('langToggle');
+  var lang='ar';
+  function setLang(l){
+    lang=l;
+    var html=document.documentElement;
+    html.lang=l;
+    html.dir=(l==='ar')?'rtl':'ltr';
+    document.querySelectorAll('[data-ar]').forEach(function(el){
+      var t=el.getAttribute('data-'+l);
+      if(t!==null) el.textContent=t;
+    });
+    btn.textContent=(l==='ar')?'EN':'عربي';
+  }
+  btn.addEventListener('click',function(){ setLang(lang==='ar'?'en':'ar'); });
+
+  // year
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // count-up
+  function countUp(el){
+    var target=parseInt(el.getAttribute('data-count'),10)||0;
+    var suf=el.getAttribute('data-suffix')||'';
+    var dur=1300, start=null;
+    function step(ts){
+      if(!start) start=ts;
+      var p=Math.min(1,(ts-start)/dur);
+      var val=Math.floor(p*target);
+      el.textContent=val.toLocaleString('en-US')+suf;
+      if(p<1) requestAnimationFrame(step);
+      else el.textContent=target.toLocaleString('en-US')+suf;
+    }
+    requestAnimationFrame(step);
+  }
+
+  // reveal on scroll
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        var num=e.target.querySelector?e.target.querySelector('[data-count]'):null;
+        if(e.target.hasAttribute && e.target.hasAttribute('data-count')) countUp(e.target);
+        else if(num) countUp(num);
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.18});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  setLang('ar');
+})();
+</script>
+</body>
+</html>
